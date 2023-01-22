@@ -1,0 +1,18 @@
+.events_main{
+    border: 10px solid rgb(220, 220, 220);
+    height: 97%;
+    
+}
+.events_heading{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.event_content{
+    height: 87%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    
+}

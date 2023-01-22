@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+.sidebar{
+    width: 4%;
+    height: 100%;
+}
+.content{
+    width: 60%;
+    height: 100%;
+}
+.menu{
+    width: 36%;
+    height: 100%;
+}

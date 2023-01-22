@@ -1,0 +1,16 @@
+.details_main{
+    margin-left: 40px;
+    margin-top: 90px;
+    text-align: left;
+    width: 50%;
+}
+.details_heading{
+    font-size: 30px;
+    font-weight: 700;
+}
+.details_info{
+    margin-top: 50px;
+}
+.details_info_content{
+    font-size: 25px;
+}
