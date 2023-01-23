@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import '../style/Events.css';
 import Event from './Event.js';
 import axios from 'axios';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const Events = () => {
     const [people,setPeople]=useState([]);

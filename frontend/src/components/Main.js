@@ -11,6 +11,9 @@ const Main = () => {
     <div className='main'>
       <div className='sidebar'><Sidebar /></div>
       <Router>
+      <Routes>
+          <Route path="/"element={<div className='content'>Hello World</div>}/>
+        </Routes>
         <Routes>
           <Route path="/detail/:key"element={<div className='content'><Content /></div>}/>
         </Routes>

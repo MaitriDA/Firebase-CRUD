@@ -44,17 +44,17 @@ const createMenuItem = async (record) => {
 
 let database = require('./csvjson.json');
 
-// for (let index = 0; index < database.length; index++) {
-//   let element = {
-//     ID:database[index].ID,
-//     Name:database[index].Name,
-//     Location:database[index].Location,
-//     Gender:database[index].Gender,
-//     Date:database[index].Date,
-//     Time:database[index].Time,
-//     Image:database[index].Image
-//   }
-//   createMenuItem(element);
-// }
+for (let index = 0; index < database.length; index++) {
+  let element = {
+    ID:database[index].ID,
+    Name:database[index].Name,
+    Location:database[index].Location,
+    Gender:database[index].Gender,
+    Date:database[index].Date,
+    Time:database[index].Time,
+    Image:database[index].Image
+  }
+  createMenuItem(element);
+}
 
 app.listen(4000, () => console.log("Up & RUnning *4000"));
