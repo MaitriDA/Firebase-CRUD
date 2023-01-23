@@ -1,11 +1,11 @@
 const firebase = require("firebase");
 const firebaseConfig = {
-  apiKey: "AIzaSyDbIotWN5erYRu0eCmoz5aDSGClERNWvN8",
-  authDomain: "internship-698b8.firebaseapp.com",
-  projectId: "internship-698b8",
-  storageBucket: "internship-698b8.appspot.com",
-  messagingSenderId: "181698493571",
-  appId: "1:181698493571:web:88d519425d3a611b716fb6"
+  apiKey: "AIzaSyCqe0jGluD3BE7m0R8kbSIBi5Yha_f2RBQ",
+  authDomain: "crud-cc5e0.firebaseapp.com",
+  projectId: "crud-cc5e0",
+  storageBucket: "crud-cc5e0.appspot.com",
+  messagingSenderId: "763780375343",
+  appId: "1:763780375343:web:8ae71e9e1b1ad1a3a537da"
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
