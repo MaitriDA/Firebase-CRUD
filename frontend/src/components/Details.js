@@ -4,11 +4,9 @@ import axios from 'axios';
 
 const Details = () => {
   const id=useParams();
-  console.log(id.key);
   const [people,setPeople]=useState({});
   const getDetail=async()=>{
     const det=await axios.get(`http://localhost:4000/getByID/${id.key}`);
-    console.log(det.data);
     setPeople(det.data);
   }
   useEffect(() => {

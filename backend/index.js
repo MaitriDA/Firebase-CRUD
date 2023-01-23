@@ -19,7 +19,7 @@ app.post("/create", async (req, res) => {
 
 app.get("/getByID/:id", async (req, res) => {
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
   const snapshot = await Details.get();
   const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
   var detail={};
@@ -27,6 +27,47 @@ app.get("/getByID/:id", async (req, res) => {
     if(list[i].id===id){
       detail=list[i];
       break;
+    }
+  }
+  res.send(detail);
+});
+
+app.get("/getByLocation/:location", async (req, res) => {
+  const location = req.params.location;
+  // console.log(id);
+  const snapshot = await Details.get();
+  const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  var detail=[];
+  for(let i=0;i<list.length;i++){
+    if(list[i].Location===location){
+      detail.push(list[i]);
+    }
+  }
+  res.send(detail);
+});
+
+app.get("/getByGender/:gender", async (req, res) => {
+  const gender = req.params.gender;
+  // console.log(id);
+  const snapshot = await Details.get();
+  const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  var detail=[];
+  for(let i=0;i<list.length;i++){
+    if(list[i].Gender===gender){
+      detail.push(list[i]);
+    }
+  }
+  res.send(detail);
+});
+
+app.get("/getByDate/:date1", async (req, res) => {
+  const date1 = req.params.date1;
+  const snapshot = await Details.get();
+  const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  var detail=[];
+  for(let i=0;i<list.length;i++){
+    if(list[i].Date===date1){
+      detail.push(list[i]);
     }
   }
   res.send(detail);
@@ -44,7 +85,7 @@ const createMenuItem = async (record) => {
 
 let database = require('./csvjson.json');
 
-for (let index = 0; index < database.length; index++) {
+/*for (let index = 0; index < database.length; index++) {
   let element = {
     ID:database[index].ID,
     Name:database[index].Name,
@@ -55,6 +96,6 @@ for (let index = 0; index < database.length; index++) {
     Image:database[index].Image
   }
   createMenuItem(element);
-}
+}*/
 
 app.listen(4000, () => console.log("Up & RUnning *4000"));
