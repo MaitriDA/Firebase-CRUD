@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-
+import ListIcon from '@mui/icons-material/List';
 const Events = () => {
     const [people, setPeople] = useState([]);
     const [value, setValue] = useState(null);
@@ -89,7 +89,7 @@ const Events = () => {
                         aria-expanded={open ? 'true' : undefined}
                         onClick={handleClick}
                     >
-                        Dashboard
+                        <ListIcon/>
                     </Button>
                     <Menu
                         id="basic-menu"
